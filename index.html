@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website Cookies — Freshly baked cookies premium dengan berbagai varian rasa. Hangat, lembut, dan dibuat dengan cinta.">
+    <meta name="theme-color" content="#faf6ef">
+
+    <title>Website Cookies — Freshly Baked. Made to Crave.</title>
+
+    <script>
+        (function () {
+            try {
+                if (localStorage.getItem("wc-theme") === "dark") {
+                    document.documentElement.classList.add("dark");
+                }
+            } catch (e) {}
+        })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/output.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="min-h-screen font-sans">
+
+    <a href="#cookies"
+        class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-[var(--accent)] focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-white">
+        Skip to catalog
+    </a>
+
+    <!-- ============ NAVBAR ============ -->
+    <header id="navbar" class="fixed inset-x-0 top-0 z-50">
+        <nav class="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4 lg:px-8">
+            <a href="#top" class="flex items-center gap-2.5" aria-label="Website Cookies — kembali ke atas">
+                <span class="grid h-10 w-10 place-items-center overflow-hidden rounded-full shadow-md">
+                    <img
+                        src="image/logo-cookie.png"
+                        alt="Website Cookies"
+                        class="h-full w-full object-cover"
+                    >
+                </span>
+                <span class="font-display text-xl font-semibold tracking-tight">
+                    Website<span class="text-[var(--accent)]">Cookies</span>
+                </span>
+            </a>
+
+            <div class="hidden items-center gap-7 text-sm font-medium text-[var(--text-muted)] md:flex">
+                <a href="#story" class="transition hover:text-[var(--accent)]">Story</a>
+                <a href="#advantages" class="transition hover:text-[var(--accent)]">Advantages</a>
+                <a href="#cookies" class="transition hover:text-[var(--accent)]">Cookies</a>
+                <a href="#testimonials" class="transition hover:text-[var(--accent)]">Lovers</a>
+                <a href="#contact" class="transition hover:text-[var(--accent)]">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-2.5">
+                <button id="theme-toggle" type="button"
+                    class="grid h-10 w-10 place-items-center rounded-full border border-[var(--border)] bg-[var(--card)] text-[var(--text)] transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
+                    aria-label="Ganti tema terang / gelap">
+                    <svg id="icon-moon" class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                    <svg id="icon-sun" class="hidden h-[18px] w-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+                    </svg>
+                </button>
+
+                <button id="menu-btn" type="button"
+                    class="grid h-10 w-10 place-items-center rounded-full border border-[var(--border)] bg-[var(--card)] text-[var(--text)] transition hover:border-[var(--accent)] md:hidden"
+                    aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                        <path d="M4 7h16M4 12h16M4 17h16" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="hidden border-t border-[var(--border)] bg-[var(--bg)] px-5 py-4 md:hidden">
+            <div class="grid gap-1 text-sm font-medium text-[var(--text-muted)]">
+                <a href="#story" class="menu-link rounded-xl px-4 py-2.5 transition hover:bg-[var(--card-soft)] hover:text-[var(--accent)]">Story</a>
+                <a href="#advantages" class="menu-link rounded-xl px-4 py-2.5 transition hover:bg-[var(--card-soft)] hover:text-[var(--accent)]">Advantages</a>
+                <a href="#cookies" class="menu-link rounded-xl px-4 py-2.5 transition hover:bg-[var(--card-soft)] hover:text-[var(--accent)]">Cookies</a>
+                <a href="#testimonials" class="menu-link rounded-xl px-4 py-2.5 transition hover:bg-[var(--card-soft)] hover:text-[var(--accent)]">Lovers</a>
+                <a href="#contact" class="menu-link rounded-xl px-4 py-2.5 transition hover:bg-[var(--card-soft)] hover:text-[var(--accent)]">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ============ HERO ============ -->
+        <section id="top" class="relative flex min-h-screen items-center overflow-hidden bg-[var(--bg-soft)] pb-20 pt-28">
+            <div class="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-[var(--accent-soft)]/60 blur-3xl anim-drift" aria-hidden="true"></div>
+            <div class="pointer-events-none absolute -bottom-32 -right-24 h-80 w-80 rounded-full bg-[#ecc9a0]/50 blur-3xl anim-drift" style="animation-delay:-4s" aria-hidden="true"></div>
+
+            <div class="relative mx-auto grid w-full max-w-6xl items-center gap-12 px-5 lg:grid-cols-2 lg:px-8">
+                <div class="text-center lg:text-left">
+                    <p class="reveal inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--card)] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--accent)]">
+                        <span class="h-2 w-2 rounded-full bg-[var(--wa)]"></span>
+                        Freshly Baked Every Day
+                    </p>
+
+                    <h1 class="reveal mt-6 font-display text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl xl:text-7xl" style="transition-delay:80ms">
+                        Freshly Baked.<br>
+                        <span class="italic text-[var(--accent)]">Made to Crave.</span>
+                    </h1>
+
+                    <p class="reveal mx-auto mt-6 max-w-xl text-base leading-relaxed text-[var(--text-muted)] sm:text-lg lg:mx-0" style="transition-delay:160ms">
+                        Warm, buttery cookies yang dipanggang setiap hari dari bahan premium.
+                        Renyah di luar, lembut di dalam, dan selalu menggoda untuk dinikmati lagi.
+                    </p>
+
+                    <div class="reveal mt-9 flex flex-col items-center gap-3 sm:flex-row lg:justify-start sm:justify-center" style="transition-delay:240ms">
+                        <button data-scroll="#cookies" type="button"
+                            class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[var(--accent)]/25 transition hover:-translate-y-0.5 hover:bg-[var(--accent-strong)] sm:w-auto">
+                            Explore Cookies
+                            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M12 5v14M19 12l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <a href="https://wa.me/6288103716947" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex w-full items-center justify-center gap-2 rounded-full border border-[var(--border)] bg-[var(--card)] px-8 py-3.5 text-sm font-semibold text-[var(--text)] transition hover:-translate-y-0.5 hover:border-[var(--accent)] hover:text-[var(--accent)] sm:w-auto">
+                            Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <div class="reveal relative mx-auto w-full max-w-md lg:max-w-none" style="transition-delay:120ms">
+                    <div class="relative aspect-square">
+                        <div class="hero-cookie absolute inset-0 rounded-full" aria-hidden="true"></div>
+                        <div class="absolute inset-0 grid place-items-center" aria-hidden="true">
+<img
+    src="image/hero-cookie.png"
+    alt="Premium chocolate chip cookie"
+    class="w-full max-w-[420px] object-contain drop-shadow-[0_24px_30px_rgba(90,50,10,0.4)] anim-float"
+/>                        </div>
+                        <div class="hero-chip anim-float anim-floating-delay-1 absolute left-2 top-10 grid h-16 w-16 place-items-center rounded-3xl text-3xl" aria-hidden="true">🍫</div>
+                        <div class="hero-chip anim-float anim-floating-delay-2 absolute right-2 top-1/4 grid h-14 w-14 place-items-center rounded-3xl text-2xl" aria-hidden="true">🥜</div>
+                        <div class="hero-chip anim-float anim-floating-delay-1 absolute bottom-12 left-6 grid h-14 w-14 place-items-center rounded-3xl text-2xl" aria-hidden="true">🍵</div>
+                        <div class="hero-chip anim-float anim-floating-delay-2 absolute bottom-4 right-8 grid h-12 w-12 place-items-center rounded-2xl text-xl" aria-hidden="true">✨</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ BRAND / INTRODUCTION ============ -->
+        <section id="brand" class="bg-[var(--bg)] py-24">
+            <div class="mx-auto grid w-full max-w-6xl items-center gap-12 px-5 lg:grid-cols-2 lg:px-8">
+                <div class="reveal">
+                    <p class="text-xs font-semibold uppercase tracking-[0.25em] text-[var(--accent)]">The Brand</p>
+                    <h2 class="mt-3 font-display text-3xl font-semibold leading-tight sm:text-4xl">
+                        Cookies yang dibuat <span class="italic text-[var(--accent)]">seperti karya</span>, bukan sekadar camilan.
+                    </h2>
+                    <p class="mt-5 leading-relaxed text-[var(--text-muted)]">
+                        Website Cookies lahir dari kecintaan pada cookies hangat yang baru dipanggang.
+                        Kami menghadirkan berbagai varian rasa — dari klasik hingga premium — supaya setiap gigitan
+                        terasa spesial dan kembali membawa kenangan manis.
+                    </p>
+                </div>
+                <div class="reveal grid gap-4 sm:grid-cols-2" style="transition-delay:120ms">
+                    <div class="rounded-3xl border border-[var(--border)] bg-[var(--card)] p-6 shadow-sm">
+                        <span class="text-3xl">🧈</span>
+                        <h3 class="mt-3 font-display text-lg">Real Butter</h3>
+                        <p class="mt-1.5 text-sm text-[var(--text-muted)]">Menggunakan mentega asli untuk aroma dan tekstur yang autentik.</p>
+                    </div>
+                    <div class="rounded-3xl border border-[var(--border)] bg-[var(--card)] p-6 shadow-sm">
+                        <span class="text-3xl">🌾</span>
+                        <h3 class="mt-3 font-display text-lg">Premium Ingredients</h3>
+                        <p class="mt-1.5 text-sm text-[var(--text-muted)]">Bahan pilihan berkualitas tinggi di setiap adonan.</p>
+                    </div>
+                    <div class="rounded-3xl border border-[var(--border)] bg-[var(--card)] p-6 shadow-sm">
+                        <span class="text-3xl">🔥</span>
+                        <h3 class="mt-3 font-display text-lg">Baked Fresh Daily</h3>
+                        <p class="mt-1.5 text-sm text-[var(--text-muted)]">Dipanggang setiap hari agar selalu hangat dan segar.</p>
+                    </div>
+                    <div class="rounded-3xl border border-[var(--border)] bg-[var(--card)] p-6 shadow-sm">
+                        <span class="text-3xl">🤎</span>
+                        <h3 class="mt-3 font-display text-lg">Made with Love</h3>
+                        <p class="mt-1.5 text-sm text-[var(--text-muted)]">Dibuat dengan telaten dan sepenuh hati.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ STORY ============ -->
+        <section id="story" class="relative overflow-hidden bg-[var(--bg-soft)] py-24">
+            <div class="pointer-events-none absolute right-0 top-1/2 h-64 w-64 -translate-y-1/2 translate-x-1/4 rounded-full bg-[var(--accent-soft)]/50 blur-3xl" aria-hidden="true"></div>
+            <div class="relative mx-auto max-w-3xl px-5 text-center lg:px-8">
+                <p class="reveal text-xs font-semibold uppercase tracking-[0.25em] text-[var(--accent)]">Our Story</p>
+                <h2 class="reveal mt-3 font-display text-3xl font-semibold sm:text-4xl" style="transition-delay:80ms">
+                    Setiap cookies punya<br><span class="italic text-[var(--accent)]">cerita manisnya sendiri.</span>
+                </h2>
+                <div class="reveal mt-8 space-y-5 text-left leading-relaxed text-[var(--text-muted)]" style="transition-delay:160ms">
+                    <p>
+                        Semuanya dimulai dari dapur kecil dan satu loyang berisi adonan cookies.
+                        Aroma mentega yang baru terpanggang ternyata mampu mengubah hari biasa menjadi lebih hangat —
+                        itulah yang ingin kami bagikan.
+                    </p>
+                    <p>
+                        Kami memilih bahan dengan cermat, mencampur dengan telaten, dan memanggang dalam porsi kecil
+                        setiap harinya. Hasilnya adalah cookies yang renyah di luar, lumer di dalam, dan kaya rasa
+                        di setiap gigitan.
+                    </p>
+                    <p>
+                        Baik untuk menemani secangkir teh, hadiah untuk orang tersayang, atau sekadar memanjakan diri —
+                        biarkan cookies ini mengambil peran sebagai momen kecil yang menyenangkan.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ ADVANTAGES ============ -->
+        <section id="advantages" class="bg-[var(--bg)] py-24">
+            <div class="mx-auto w-full max-w-6xl px-5 lg:px-8">
+                <div class="max-w-2xl">
+                    <p class="reveal text-xs font-semibold uppercase tracking-[0.25em] text-[var(--accent)]">Advantages</p>
+                    <h2 class="reveal mt-3 font-display text-3xl font-semibold sm:text-4xl" style="transition-delay:80ms">
+                        Kenapa <span class="italic text-[var(--accent)]">Website Cookies</span>?
+                    </h2>
+                </div>
+
+                <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                    <div class="reveal group rounded-3xl border border-[var(--border)] bg-[var(--card)] p-7 transition hover:-translate-y-2 hover:border-[var(--accent)]/50 hover:shadow-xl hover:shadow-[var(--accent)]/5">
+                        <span class="grid h-14 w-14 place-items-center rounded-2xl bg-[var(--accent-soft)] text-2xl transition group-hover:scale-110">🔥</span>
+                        <h3 class="mt-5 font-display text-lg font-semibold">Freshly Baked</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">Dipanggang setiap hari dalam porsi kecil agar selalu hangat dan segar ketika sampai di tanganmu.</p>
+                    </div>
+                    <div class="reveal group rounded-3xl border border-[var(--border)] bg-[var(--card)] p-7 transition hover:-translate-y-2 hover:border-[var(--accent)]/50 hover:shadow-xl hover:shadow-[var(--accent)]/5" style="transition-delay:80ms">
+                        <span class="grid h-14 w-14 place-items-center rounded-2xl bg-[var(--accent-soft)] text-2xl transition group-hover:scale-110">🌾</span>
+                        <h3 class="mt-5 font-display text-lg font-semibold">Premium Ingredients</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">Menggunakan cokelat, mentega, dan bahan pilihan yang menonjolkan rasa autentik.</p>
+                    </div>
+                    <div class="reveal group rounded-3xl border border-[var(--border)] bg-[var(--card)] p-7 transition hover:-translate-y-2 hover:border-[var(--accent)]/50 hover:shadow-xl hover:shadow-[var(--accent)]/5" style="transition-delay:160ms">
+                        <span class="grid h-14 w-14 place-items-center rounded-2xl bg-[var(--accent-soft)] text-2xl transition group-hover:scale-110">⭐</span>
+                        <h3 class="mt-5 font-display text-lg font-semibold">Rich Flavours</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">Mulai dari klasik hingga signature premium, ada varian untuk setiap selera.</p>
+                    </div>
+                    <div class="reveal group rounded-3xl border border-[var(--border)] bg-[var(--card)] p-7 transition hover:-translate-y-2 hover:border-[var(--accent)]/50 hover:shadow-xl hover:shadow-[var(--accent)]/5" style="transition-delay:240ms">
+                        <span class="grid h-14 w-14 place-items-center rounded-2xl bg-[var(--accent-soft)] text-2xl transition group-hover:scale-110">🤍</span>
+                        <h3 class="mt-5 font-display text-lg font-semibold">Made with Love</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">Setiap adonan dikerjakan dengan telaten — bukan sekadar produksi massal.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CATALOG ============ -->
+        <section id="cookies" class="relative overflow-hidden bg-[var(--bg-soft)] py-24">
+            <div class="relative mx-auto w-full max-w-6xl px-5 lg:px-8">
+                <div class="mx-auto max-w-2xl text-center">
+                    <p class="reveal text-xs font-semibold uppercase tracking-[0.25em] text-[var(--accent)]">The Catalog</p>
+                    <h2 class="reveal mt-3 font-display text-3xl font-semibold sm:text-4xl" style="transition-delay:80ms">
+                        Our <span class="italic text-[var(--accent)]">Cookies</span>
+                    </h2>
+                    <p class="reveal mt-4 text-[var(--text-muted)]" style="transition-delay:160ms">
+                        Pilih favoritmu dari lima belas varian rasa — hangat, lembut, dan siap menggoda.
+                    </p>
+                </div>
+
+                <div class="reveal mx-auto mt-10 max-w-xl" style="transition-delay:200ms">
+                    <div class="relative">
+                        <svg class="pointer-events-none absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-[var(--text-muted)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="m21 21-4.35-4.35" />
+                        </svg>
+                        <input id="search-input" type="search" autocomplete="off"
+                            class="search-input w-full rounded-full py-4 pl-13 pr-5 text-sm placeholder:text-sm focus:outline-none"
+                            placeholder="Search cookies by name or price…" aria-label="Cari cookies berdasarkan nama atau harga">
+                    </div>
+                    <p id="product-count" class="mt-4 text-center text-xs font-medium uppercase tracking-[0.2em] text-[var(--text-muted)]"></p>
+                </div>
+
+                <div id="products-grid" class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"></div>
+
+                <div id="empty-state" class="hidden mt-14 flex flex-col items-center justify-center rounded-3xl border border-dashed border-[var(--border)] bg-[var(--card)] px-6 py-16 text-center">
+                    <span class="text-5xl">🍪</span>
+                    <h3 class="mt-4 font-display text-xl font-semibold">Cookies tidak ditemukan</h3>
+                    <p class="mt-2 text-sm text-[var(--text-muted)]">Coba cari dengan nama atau harga cookies lainnya.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ TESTIMONIALS ============ -->
+        <section id="testimonials" class="bg-[var(--bg)] py-24">
+            <div class="mx-auto w-full max-w-6xl px-5 lg:px-8">
+                <div class="mx-auto max-w-2xl text-center">
+                    <p class="reveal text-xs font-semibold uppercase tracking-[0.25em] text-[var(--accent)]">Testimonials</p>
+                    <h2 class="reveal mt-3 font-display text-3xl font-semibold sm:text-4xl" style="transition-delay:80ms">
+                        Loved by <span class="italic text-[var(--accent)]">Cookie Lovers</span>
+                    </h2>
+                </div>
+
+                <div id="testimonials-grid" class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"></div>
+            </div>
+        </section>
+
+        <!-- ============ CONTACT ============ -->
+        <section id="contact" class="bg-[var(--bg-soft)] py-24">
+            <div class="mx-auto w-full max-w-4xl px-5 lg:px-8">
+                <div class="reveal relative overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--card)] px-6 py-14 text-center shadow-xl shadow-[var(--accent)]/5 sm:px-12">
+                    <div class="pointer-events-none absolute -right-14 -top-14 h-44 w-44 rounded-full bg-[var(--accent-soft)]/60 blur-2xl" aria-hidden="true"></div>
+                    <div class="pointer-events-none absolute -bottom-16 -left-12 h-44 w-44 rounded-full bg-[#ecc9a0]/40 blur-2xl" aria-hidden="true"></div>
+
+                    <div class="relative">
+                        <span class="text-5xl">💬</span>
+                        <h2 class="mt-5 font-display text-3xl font-semibold sm:text-4xl">
+                            Have a craving? <span class="italic text-[var(--accent)]">Let's talk.</span>
+                        </h2>
+                        <p class="mx-auto mt-4 max-w-md leading-relaxed text-[var(--text-muted)]">
+                            Pesan sekarang dan rasakan cookies hangat yang baru dipanggang.
+                            Kami siap membantu pilihan varian kamu.
+                        </p>
+
+                        <p class="mt-7 text-xl font-semibold tracking-tight">
+                            <a href="https://wa.me/6288103716947" target="_blank" rel="noopener noreferrer" class="transition hover:text-[var(--accent)]">0881037169467</a>
+                        </p>
+
+                        <a href="https://wa.me/6288103716947?text=Halo%20Website%20Cookies%2C%20saya%20ingin%20memesan%20cookies"
+                            target="_blank" rel="noopener noreferrer"
+                            class="mt-7 inline-flex items-center justify-center gap-2.5 rounded-full bg-[var(--wa)] px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[var(--wa)]/25 transition hover:-translate-y-0.5 hover:brightness-105">
+                            <svg class="h-5 w-5" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+                                <path d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39z" />
+                                <path d="M16 3C9.373 3 4 7.984 4 14.1c0 2.19.716 4.223 1.95 5.899l-1.37 4.01 4.232-1.15a11.23 11.23 0 0 0 5.188 1.304c6.626 0 12-4.983 12-11.162C21.997 7.984 19.726 3 16 3zm5.08 14.028c-.195.546-.57 1.302-.97 1.66-.23.207-.51.382-.976.372-.448-.007-.852-.2-1.27-.384-.544-.24-1.04-.5-1.573-.79-2.25-1.22-3.714-3.1-4.266-4.715-.226-.66-.277-1.24.27-1.76.255-.252.556-.385.804-.55.224-.152.484-.214.747-.214.244 0 .454.082.67.328.246.28.674 1.262.76 1.36.09.1.2.193.24.34.03.11-.03.28-.15.474-.124.208-.31.504-.41.66-.128.185-.242.32-.105.62.717 1.373 1.948 2.7 3.03 3.35.205.11.356.09.49-.047.196-.202.424-.546.654-.85.176-.232.32-.283.55-.18.233.096 1.47.69 1.72.822.253.125.42.19.47.29s.06.378-.103.743z" />
+                            </svg>
+                            Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="border-t border-[var(--border)] bg-[var(--bg)] py-12">
+        <div class="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-6 px-5 text-center md:flex-row md:text-left lg:px-8">
+            <div>
+                <a href="#top" class="inline-flex items-center gap-2.5">
+                    <span class="grid h-9 w-9 place-items-center rounded-full bg-[linear-gradient(150deg,#e9c98a,#b97f4f_60%,#8a5a2b)] text-lg shadow-md">🍪</span>
+                    <span class="font-display text-lg font-semibold">Website<span class="text-[var(--accent)]">Cookies</span></span>
+                </a>
+                <p class="mt-2 max-w-xs text-xs leading-relaxed text-[var(--text-muted)]">
+                    Freshly baked cookies premium. Hangat, lembut, dan dibuat dengan cinta.
+                </p>
+            </div>
+            <div class="text-sm text-[var(--text-muted)]">
+                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--text)]">WhatsApp</p>
+                <a href="https://wa.me/6288103716947" target="_blank" rel="noopener noreferrer" class="mt-1.5 inline-block transition hover:text-[var(--accent)]">0881037169467</a>
+            </div>
+        </div>
+        <p class="mt-10 border-t border-[var(--border)] pt-6 text-center text-xs text-[var(--text-muted)]">
+            © <span data-year>2025</span> Website Cookies. All rights reserved. Made with 🍪 and lots of love.
+        </p>
+    </footer>
+
+    <!-- ============ FLOATING WHATSAPP ============ -->
+    <a id="wa-float" href="https://wa.me/6288103716947?text=Halo%20Website%20Cookies%2C%20saya%20ingin%20bertanya" target="_blank" rel="noopener noreferrer"
+        class="fixed bottom-6 right-6 z-50 grid h-14 w-14 place-items-center rounded-full text-white"
+        aria-label="Chat on WhatsApp">
+        <span class="wa-ring" aria-hidden="true"></span>
+        <svg class="relative h-7 w-7" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+            <path d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39z" />
+            <path d="M16 3C9.373 3 4 7.984 4 14.1c0 2.19.716 4.223 1.95 5.899l-1.37 4.01 4.232-1.15a11.23 11.23 0 0 0 5.188 1.304c6.626 0 12-4.983 12-11.162C21.997 7.984 19.726 3 16 3zm5.08 14.028c-.195.546-.57 1.302-.97 1.66-.23.207-.51.382-.976.372-.448-.007-.852-.2-1.27-.384-.544-.24-1.04-.5-1.573-.79-2.25-1.22-3.714-3.1-4.266-4.715-.226-.66-.277-1.24.27-1.76.255-.252.556-.385.804-.55.224-.152.484-.214.747-.214.244 0 .454.082.67.328.246.28.674 1.262.76 1.36.09.1.2.193.24.34.03.11-.03.28-.15.474-.124.208-.31.504-.41.66-.128.185-.242.32-.105.62.717 1.373 1.948 2.7 3.03 3.35.205.11.356.09.49-.047.196-.202.424-.546.654-.85.176-.232.32-.283.55-.18.233.096 1.47.69 1.72.822.253.125.42.19.47.29s.06.378-.103.743z" />
+        </svg>
+    </a>
+
+    <!-- ============ PRODUCT DETAIL OVERLAY ============ -->
+    <div id="detail-overlay" class="fixed inset-0 z-[90] hidden" role="dialog" aria-modal="true" aria-label="Detail produk">
+        <div class="detail-backdrop"></div>
+        <div class="relative z-10 flex h-full w-full overflow-y-auto p-4 sm:p-6">
+            <div class="detail-panel relative m-auto grid w-full max-w-4xl overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--card)] shadow-2xl md:grid-cols-2 md:max-h-[86vh]">
+                <button id="detail-close" type="button"
+                    class="absolute right-4 top-4 z-20 grid h-10 w-10 place-items-center rounded-full bg-black/30 text-white backdrop-blur transition hover:bg-black/45"
+                    aria-label="Tutup detail produk">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                        <path d="M18 6 6 18M6 6l12 12" />
+                    </svg>
+                </button>
+
+                <div id="detail-media" class="detail-media relative aspect-[4/3] md:aspect-auto md:min-h-[420px]"></div>
+
+                <div id="detail-info" class="detail-info relative flex flex-col justify-center p-6 md:p-10">
+                    <p id="detail-tag" class="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent)]"></p>
+                    <h3 id="detail-name" class="mt-2 font-display text-2xl font-semibold sm:text-3xl"></h3>
+                    <p id="detail-price" class="mt-2 text-2xl font-semibold text-[var(--accent-strong)]"></p>
+                    <p id="detail-desc" class="mt-4 leading-relaxed text-[var(--text-muted)]"></p>
+                    <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+                        <a id="detail-wa" href="https://wa.me/6288103716947" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[var(--wa)] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[var(--wa)]/25 transition hover:-translate-y-0.5 hover:brightness-105 sm:w-auto">
+                            Order via WhatsApp
+                        </a>
+                        <button id="detail-back" type="button"
+                            class="inline-flex w-full items-center justify-center gap-2 rounded-full border border-[var(--border)] bg-[var(--card)] px-6 py-3 text-sm font-semibold text-[var(--text)] transition hover:border-[var(--accent)] hover:text-[var(--accent)] sm:w-auto">
+                            ← Back to cookies
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
